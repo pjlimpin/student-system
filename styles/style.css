@@ -1,0 +1,15 @@
+body{
+    background-color: 1a1a1a;
+    color: white;
+}
+header{
+    color: rgb(175, 95, 95);
+    align-items: center;
+    text-align: center;
+}
+label{
+    margin-bottom: 20px;
+}
+input{
+    gap: 50px;
+}
