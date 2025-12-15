@@ -14,27 +14,29 @@ include("php/connection.php");
     <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
-    <div id="register-section" style="text-align: center;">
-    <h1 >Register here</h1>
-    <label>First Name:</label>
-    <input type="text" name="first_name"><br>
-    <label>Last Name:</label>
-    <input type="text" name="last_name"><br>
-    <label>Birthday:</label>
-    <input type="text" name="birthday"><br>
-    <label>Contact Number:</label>
-    <input type="tel" name="phone" 
-       pattern="[0-9]{11}" 
-       placeholder="09123456789"
-       title="Please enter 11 digits (e.g., 09123456789)"><br>
-    <label>Email:</label>
-    <input type="text" name="email"><br>
-    <label>Username:</label>
-    <input type="text" name="username"><br>
-    <label>Password:</label>
-    <input type="password" name="password"><br>
-    <input type="submit" name="register" value="REGISTER">
-    </div>
+    <form method="POST" action="index.php">
+        <div id="register-section" style="text-align: center;">
+            <h1>Register here</h1>
+            <label>First Name:</label>
+            <input type="text" name="first_name"><br>
+            <label>Last Name:</label>
+            <input type="date" name="last_name"><br>
+            <label>Birthday:</label>
+            <input type="text" name="birthday"><br>
+            <label>Contact Number:</label>
+            <input type="tel" name="phone" 
+                   pattern="[0-9]{11}"
+                   placeholder="09123456789"
+                   title="Please enter 11 digits (e.g., 09123456789)"><br>
+            <label>Email:</label>
+            <input type="text" name="email"><br>
+            <label>Username:</label>
+            <input type="text" name="username"><br>
+            <label>Password:</label>
+            <input type="password" name="password"><br>
+            <input type="submit" name="register" value="REGISTER">
+        </div>
+    </form>
 </body>
 </html>
 <?php
@@ -62,9 +64,9 @@ if(isset($_POST["register"])){
             echo "Please fill the form completely!!";
         }else{
             $hash=password_hash($password,PASSWORD_DEFAULT);
-            $stmt =$conn->prepare("INSERT INTO student_info (first_name,last_name,birthday,contact_number,email,username,password) VALUES (?,?,?,?,?,?,$hash)");
+         $stmt = $conn->prepare("INSERT INTO student_info (first_name,last_name,birthday,contact_number,email,username,password) VALUES (?,?,?,?,?,?,?)");
 
-           $stmt->bind_param("sssssss", $first_name, $last_name, $birthday, $contactNum, $email, $username, $password);
+           $stmt->bind_param("sssssss", $first_name, $last_name, $birthday, $contactNum, $email, $username, $hash);
         }
                     if ($stmt->execute()) {
                         echo "Registration successful!";
@@ -76,7 +78,5 @@ if(isset($_POST["register"])){
 }else{
     echo "cannot submit";
 }
-
-
 
 ?>
