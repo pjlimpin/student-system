@@ -20,9 +20,9 @@ include("php/connection.php");
             <label>First Name:</label>
             <input type="text" name="first_name"><br>
             <label>Last Name:</label>
-            <input type="date" name="last_name"><br>
-            <label>Birthday:</label>
-            <input type="text" name="birthday"><br>
+            <input type="text" name="last_name"><br>
+            <label>Birthday:</label><br>
+            <input type="date" name="birthday"><br>
             <label>Contact Number:</label>
             <input type="tel" name="phone" 
                    pattern="[0-9]{11}"
@@ -66,7 +66,7 @@ if(isset($_POST["register"])){
             $hash=password_hash($password,PASSWORD_DEFAULT);
          $stmt = $conn->prepare("INSERT INTO student_info (first_name,last_name,birthday,contact_number,email,username,password) VALUES (?,?,?,?,?,?,?)");
 
-           $stmt->bind_param("sssssss", $first_name, $last_name, $birthday, $contactNum, $email, $username, $hash);
+           $stmt->bind_param("sssssss", $firstname, $lastname, $birthday, $contactNum, $email, $username, $hash);
         }
                     if ($stmt->execute()) {
                         echo "Registration successful!";
