@@ -35,6 +35,10 @@ include("php/connection.php");
             <label>Password:</label>
             <input type="password" name="password"><br>
             <input type="submit" name="register" value="REGISTER">
+            <br><br>
+            <a href="index.php">Go Back</a>
+            <br><br>
+            <p>Already have an account? <a href="login.php">Login here</a></p>
         </div>
     </form>
 </body>
@@ -77,4 +81,5 @@ if(isset($_POST["register"])){
         $conn->close();
 }
 
+include("html/footer.html");
 ?>
