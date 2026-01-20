@@ -5,6 +5,7 @@ body{
     background-repeat: no-repeat;
     background-attachment: fixed;
     color: white;
+    font-family: 'Merriweather', serif;
     min-height: 100vh;
     margin: 0;
     display: flex;
@@ -14,9 +15,15 @@ body{
   
 }
 header{
-    color: rgb(175, 95, 95);
+    color: #f5e6c8;
     align-items: center;
     text-align: center;
+}
+
+header h1,
+header h3 {
+    font-family: 'Cinzel', serif;
+    letter-spacing: 1px;
 }
 #register-section{
     background: rgba(180, 152, 152, 0.8);
@@ -47,6 +54,26 @@ header{
     padding: 30px;
     border-radius: 10px;
     text-align: center;
+}
+
+/* Main headings across pages */
+#home-section h1,
+#login-section h1,
+#register-section h1,
+body > h1 {
+    font-family: 'Cinzel', serif;
+    letter-spacing: 1px;
+}
+
+/* Simple error alert style for login page */
+.alert-error {
+    background: rgba(120, 20, 20, 0.9);
+    color: #ffecec;
+    padding: 10px 15px;
+    margin: 10px auto 15px;
+    border-radius: 6px;
+    max-width: 320px;
+    font-size: 0.9rem;
 }
 #register-section h1, #login-section h1 {
     text-align: center;
