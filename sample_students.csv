@@ -1,0 +1,13 @@
+first_name,last_name,birthday,contact_number,email,username,password
+John,Smith,2000-05-15,09123456789,john.smith@email.com,johnsmith,password123
+Maria,Garcia,2001-03-22,09234567890,maria.garcia@email.com,mariagarcia,securepass456
+David,Johnson,1999-11-08,09345678901,david.johnson@email.com,davidjohnson,mypass789
+Sarah,Williams,2002-07-30,09456789012,sarah.williams@email.com,sarahwilliams,pass123word
+Michael,Brown,2000-01-18,09567890123,michael.brown@email.com,michaelbrown,student2024
+Emily,Davis,2001-09-12,09678901234,emily.davis@email.com,emilydavis,studypass321
+James,Wilson,1999-12-25,09789012345,james.wilson@email.com,jameswilson,learn1234
+Olivia,Miller,2002-04-05,09890123456,olivia.miller@email.com,oliviamiller,academic567
+Daniel,Moore,2000-08-20,09901234567,daniel.moore@email.com,danielmoore,education89
+Sophia,Taylor,2001-06-14,09112345678,sophia.taylor@email.com,sophiataylor,school2024
+Alexander,Anderson,1999-10-03,09223456789,alex.anderson@email.com,alexanderanderson,classroom123
+Isabella,Thomas,2002-02-28,09334567890,isabella.thomas@email.com,isabellathomas,lesson456
