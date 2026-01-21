@@ -1,2 +1,2 @@
 # student-system
-beginners system for school
+beginners system for school registration
